@@ -6,7 +6,10 @@ psimkins/example-node:
     - node_modules/
 
   Build:
-    - sudo npm install
+    - sudo apt-get -y update
+    - sudo apt-get -y install nodejs
+    - sudo apt-get -y install npm
+    - npm install
     - npm test
 
   PreInstall:
