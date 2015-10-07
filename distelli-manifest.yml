@@ -10,7 +10,6 @@ psimkins/example-node:
     - sudo apt-get -y install nodejs
     - sudo apt-get -y install npm
     - npm install
-    - npm test
 
   PreInstall:
     - sudo apt-get -y update
@@ -19,9 +18,8 @@ psimkins/example-node:
 
   PostInstall:
     - npm install
-    
-  Env:
-    - PORT: 3000
-    
+
   Exec:
     - /usr/bin/nodejs app.js
+
+  PostStart:
