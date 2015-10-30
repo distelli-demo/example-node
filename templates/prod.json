@@ -1,4 +1,4 @@
 {
-  "display_msg": false,
+  "display_msg": true,
   "this_env":"PROD"
 }
