@@ -1,3 +1,4 @@
+var newRelic = require('newrelic');
 var express = require('express');
 var app = express();
 var path = require('path');
@@ -28,7 +29,7 @@ app.use(function(req, res, next) {
     next(err);
 });
 
-var server = app.listen(3000, function (){
+var server = app.listen(process.env.PORT || 3000, function (){
   var port = server.address().port;
   console.log('Magic is happening on port', port, " at ", timeController.getDate());
 });
